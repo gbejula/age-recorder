@@ -2,6 +2,10 @@ import React from 'react';
 
 import './AgeForm.css';
 
+const onaddGoalHandler = event => {
+  event.preventDefault();
+};
+
 const AgeForm = () => {
   return (
     <form>
@@ -12,7 +16,9 @@ const AgeForm = () => {
         <input type='text' />
       </div>
       <div>
-        <button>Add User</button>
+        <button type='submit' onClick={onaddGoalHandler}>
+          Add User
+        </button>
       </div>
     </form>
   );
