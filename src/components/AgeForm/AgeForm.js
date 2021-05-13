@@ -1,26 +1,27 @@
 import React from 'react';
 
-import './AgeForm.css';
+import Card from '../UI/Card';
+import Button from '../UI/Button';
 
-const onaddGoalHandler = event => {
-  event.preventDefault();
-};
+import classes from './AgeForm.module.css';
 
-const AgeForm = () => {
+const AgeForm = props => {
+  const onaddGoalHandler = event => {
+    event.preventDefault();
+  };
+
   return (
-    <form>
-      <div>
+    <Card className={classes.input}>
+      <form>
         <label>Username</label>
         <input type='text' />
         <label>Age (Years)</label>
         <input type='text' />
-      </div>
-      <div>
-        <button type='submit' onClick={onaddGoalHandler}>
+        <Button type='submit' onClick={onaddGoalHandler}>
           Add User
-        </button>
-      </div>
-    </form>
+        </Button>
+      </form>
+    </Card>
   );
 };
 
