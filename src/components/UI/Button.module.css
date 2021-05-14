@@ -17,3 +17,10 @@
 .button:focus {
   outline: none;
 }
+
+@media (max-width: 450px) {
+  .button {
+    width: 100%;
+    text-align: center;
+  }
+}
