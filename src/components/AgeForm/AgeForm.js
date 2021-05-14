@@ -4,6 +4,7 @@ import Card from '../UI/Card';
 import Button from '../UI/Button';
 
 import classes from './AgeForm.module.css';
+import ErrorModal from '../UI/ErrorModal';
 
 const AgeForm = props => {
   const [enteredName, setEnteredName] = useState('');
@@ -32,17 +33,20 @@ const AgeForm = props => {
   };
 
   return (
-    <Card className={classes.input}>
-      <form>
-        <label>Username</label>
-        <input type='text' value={enteredName} onChange={NameHandler} />
-        <label>Age (Years)</label>
-        <input type='text' value={enteredAge} onChange={AgeHandler} />
-        <Button type='submit' onClick={addUserHandler}>
-          Add User
-        </Button>
-      </form>
-    </Card>
+    <div>
+      <ErrorModal title='An error occured!' message='Something went wrong!' />
+      <Card className={classes.input}>
+        <form>
+          <label>Username</label>
+          <input type='text' value={enteredName} onChange={NameHandler} />
+          <label>Age (Years)</label>
+          <input type='text' value={enteredAge} onChange={AgeHandler} />
+          <Button type='submit' onClick={addUserHandler}>
+            Add User
+          </Button>
+        </form>
+      </Card>
+    </div>
   );
 };
 
