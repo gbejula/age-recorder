@@ -5,7 +5,7 @@ import Button from '../UI/Button';
 
 import classes from './AgeForm.module.css';
 import ErrorModal from '../UI/ErrorModal';
-import Wrapper from '../UI/Wrapper';
+import Wrapper from '../Helpers/Wrapper';
 
 const AgeForm = props => {
   const [enteredName, setEnteredName] = useState('');
