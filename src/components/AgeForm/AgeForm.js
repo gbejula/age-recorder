@@ -5,6 +5,7 @@ import Button from '../UI/Button';
 
 import classes from './AgeForm.module.css';
 import ErrorModal from '../UI/ErrorModal';
+import Wrapper from '../UI/Wrapper';
 
 const AgeForm = props => {
   const [enteredName, setEnteredName] = useState('');
@@ -46,7 +47,7 @@ const AgeForm = props => {
   };
 
   return (
-    <div>
+    <Wrapper>
       {error && (
         <ErrorModal
           title={error.title}
@@ -65,7 +66,7 @@ const AgeForm = props => {
           </Button>
         </form>
       </Card>
-    </div>
+    </Wrapper>
   );
 };
 

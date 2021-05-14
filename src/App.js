@@ -15,10 +15,10 @@ function App() {
   };
 
   return (
-    <div>
+    <React.Fragment>
       <AgeForm onAddAge={addUserHandler} />
       <UsersList users={usersList} />
-    </div>
+    </React.Fragment>
   );
 }
 
